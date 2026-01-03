@@ -97,11 +97,11 @@ class ValidationError(ITSMError):
         self.field = field
 
 
-class ConnectionError(ITSMError):
+class ITSMConnectionError(ITSMError):
     """Connection to provider failed."""
 
 
-class PermissionError(ITSMError):
+class ITSMPermissionError(ITSMError):
     """Insufficient permissions for operation."""
 
 

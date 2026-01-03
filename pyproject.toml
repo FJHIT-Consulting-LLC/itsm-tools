@@ -72,6 +72,10 @@ max-line-length = 100
 disable = [
     "too-few-public-methods",
     "too-many-arguments",
+    "too-many-positional-arguments",
+    "import-outside-toplevel",
+    "duplicate-code",
+    "invalid-name",
 ]
 
 [tool.mypy]

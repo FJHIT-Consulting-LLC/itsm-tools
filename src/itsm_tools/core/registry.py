@@ -160,6 +160,7 @@ def list_adapters() -> dict[str, list[str]]:
 def _import_adapters() -> None:
     """Import all adapter modules to trigger registration."""
     # These imports register adapters via decorators
+    # pylint: disable=unused-import,import-outside-toplevel
     try:
         import itsm_tools.atlassian  # noqa: F401
     except ImportError:
