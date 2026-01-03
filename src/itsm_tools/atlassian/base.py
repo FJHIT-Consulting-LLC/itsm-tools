@@ -21,7 +21,7 @@ Example:
 
 import logging
 import time
-from typing import Any
+from typing import Any, Self
 
 import requests
 from requests.auth import HTTPBasicAuth
@@ -114,7 +114,7 @@ class AtlassianClient:
             creds.email,
         )
 
-    def __enter__(self) -> "AtlassianClient":
+    def __enter__(self) -> Self:
         """Context manager entry."""
         return self
 
