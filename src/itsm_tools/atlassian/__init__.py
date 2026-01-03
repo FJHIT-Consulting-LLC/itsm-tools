@@ -23,6 +23,7 @@ from itsm_tools.atlassian.credentials import (
     get_credentials,
     save_credentials,
 )
+from itsm_tools.atlassian.confluence import ConfluenceAdapter
 from itsm_tools.atlassian.jira import JiraAdapter
 
 __all__ = [
@@ -40,11 +41,6 @@ __all__ = [
 
 
 # Placeholder classes - will be implemented in subsequent stories
-def ConfluenceAdapter(*args, **kwargs):  # type: ignore  # noqa: N802
-    """Placeholder for ConfluenceAdapter - implement in ITI-223."""
-    raise NotImplementedError("ConfluenceAdapter will be implemented in ITI-223")
-
-
 def JSMAdapter(*args, **kwargs):  # type: ignore  # noqa: N802
     """Placeholder for JSMAdapter - implement in ITI-224."""
     raise NotImplementedError("JSMAdapter will be implemented in ITI-224")
