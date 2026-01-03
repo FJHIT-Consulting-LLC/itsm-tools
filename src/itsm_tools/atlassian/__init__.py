@@ -12,7 +12,7 @@ Base classes:
 Example:
     from itsm_tools.atlassian import JiraAdapter, ConfluenceAdapter, JSMAdapter
 
-    with JiraAdapter(config) as jira:
+    with JiraAdapter(project="ITI") as jira:
         issue = jira.get_issue("ITI-220")
 """
 
@@ -23,9 +23,7 @@ from itsm_tools.atlassian.credentials import (
     get_credentials,
     save_credentials,
 )
-
-# Adapters will be implemented in ITI-222, ITI-223, ITI-224
-# For now, export placeholder to allow package import
+from itsm_tools.atlassian.jira import JiraAdapter
 
 __all__ = [
     # Base classes
@@ -34,7 +32,7 @@ __all__ = [
     "get_credentials",
     "save_credentials",
     "delete_credentials",
-    # Adapters (placeholders)
+    # Adapters
     "JiraAdapter",
     "ConfluenceAdapter",
     "JSMAdapter",
@@ -42,11 +40,6 @@ __all__ = [
 
 
 # Placeholder classes - will be implemented in subsequent stories
-def JiraAdapter(*args, **kwargs):  # type: ignore  # noqa: N802
-    """Placeholder for JiraAdapter - implement in ITI-222."""
-    raise NotImplementedError("JiraAdapter will be implemented in ITI-222")
-
-
 def ConfluenceAdapter(*args, **kwargs):  # type: ignore  # noqa: N802
     """Placeholder for ConfluenceAdapter - implement in ITI-223."""
     raise NotImplementedError("ConfluenceAdapter will be implemented in ITI-223")
