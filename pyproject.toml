@@ -48,6 +48,7 @@ dev = [
     "bandit>=1.7.0",
     "pre-commit>=3.0.0",
     "mypy>=1.0.0",
+    "types-requests>=2.28.0",
 ]
 
 [project.scripts]
@@ -76,6 +77,10 @@ disable = [
     "import-outside-toplevel",
     "duplicate-code",
     "invalid-name",
+    "too-many-branches",
+    "too-many-locals",
+    "too-many-statements",
+    "try-except-raise",
 ]
 
 [tool.mypy]

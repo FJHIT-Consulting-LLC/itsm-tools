@@ -5,6 +5,10 @@ This module provides adapters for:
 - ConfluenceAdapter: Wiki/documentation via Confluence REST API
 - JSMAdapter: Incident management via Jira Service Management API
 
+Base classes:
+- AtlassianClient: Base HTTP client with auth and retry logic
+- AtlassianCredentials: Credential management
+
 Example:
     from itsm_tools.atlassian import JiraAdapter, ConfluenceAdapter, JSMAdapter
 
@@ -12,10 +16,25 @@ Example:
         issue = jira.get_issue("ITI-220")
 """
 
+from itsm_tools.atlassian.base import AtlassianClient
+from itsm_tools.atlassian.credentials import (
+    AtlassianCredentials,
+    delete_credentials,
+    get_credentials,
+    save_credentials,
+)
+
 # Adapters will be implemented in ITI-222, ITI-223, ITI-224
 # For now, export placeholder to allow package import
 
 __all__ = [
+    # Base classes
+    "AtlassianClient",
+    "AtlassianCredentials",
+    "get_credentials",
+    "save_credentials",
+    "delete_credentials",
+    # Adapters (placeholders)
     "JiraAdapter",
     "ConfluenceAdapter",
     "JSMAdapter",
