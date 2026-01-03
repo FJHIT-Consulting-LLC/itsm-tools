@@ -9,9 +9,9 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 from itsm_tools.core.models import (
+    Incident,
     Issue,
     Page,
-    Incident,
     Result,
     Severity,
     SLAStatus,

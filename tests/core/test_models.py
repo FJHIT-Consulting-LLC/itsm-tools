@@ -3,12 +3,12 @@
 import pytest
 
 from itsm_tools.core.models import (
+    Incident,
     Issue,
     Page,
-    Incident,
-    Severity,
     Result,
     ResultStatus,
+    Severity,
     SLAStatus,
 )
 

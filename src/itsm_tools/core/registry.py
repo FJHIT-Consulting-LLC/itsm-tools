@@ -2,8 +2,8 @@
 
 from typing import Any, Type, TypeVar
 
-from itsm_tools.core.interfaces import IssueTracker, WikiProvider, IncidentManager
 from itsm_tools.core.exceptions import ITSMError
+from itsm_tools.core.interfaces import IncidentManager, IssueTracker, WikiProvider
 
 T = TypeVar("T", IssueTracker, WikiProvider, IncidentManager)
 
@@ -76,7 +76,7 @@ def get_issue_tracker(
         )
 
     adapter_class = _issue_tracker_registry[provider]
-    return adapter_class(config or {})
+    return adapter_class(config or {})  # type: ignore[call-arg]
 
 
 def get_wiki_provider(
@@ -108,7 +108,7 @@ def get_wiki_provider(
         )
 
     adapter_class = _wiki_provider_registry[provider]
-    return adapter_class(config or {})
+    return adapter_class(config or {})  # type: ignore[call-arg]
 
 
 def get_incident_manager(
@@ -140,7 +140,7 @@ def get_incident_manager(
         )
 
     adapter_class = _incident_manager_registry[provider]
-    return adapter_class(config or {})
+    return adapter_class(config or {})  # type: ignore[call-arg]
 
 
 def list_adapters() -> dict[str, list[str]]:

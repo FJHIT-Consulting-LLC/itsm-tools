@@ -2,7 +2,7 @@
 
 import pytest
 
-from itsm_tools.core.models import Issue, Page, Incident, Severity
+from itsm_tools.core.models import Incident, Issue, Page, Severity
 
 
 @pytest.fixture
