@@ -219,7 +219,8 @@ class JiraAdapter(AtlassianClient, IssueTracker):  # type: ignore[misc]
 
         logger.debug("Searching Jira: %s", query)
 
-        data = self._get(f"{JIRA_API_V3}/search", params=params)
+        # Use v2 API for search (v3 returns 410 on some instances)
+        data = self._get(f"{JIRA_API_V2}/search", params=params)
 
         issues = []
         for issue_data in data.get("issues", []):
